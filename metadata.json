@@ -1,0 +1,6 @@
+{
+  "name": "CV Builder",
+  "description": "A minimalist, editorial frontend-only CV and resume builder with live preview, section reordering, multiple templates, and PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

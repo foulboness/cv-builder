@@ -1,0 +1,555 @@
+import { CVData, SectionMeta } from '../types';
+
+export const defaultSectionsOrder: SectionMeta[] = [
+  { id: 'personal', title: 'Personal Details', isVisible: true },
+  { id: 'summary', title: 'Professional Summary', isVisible: true },
+  { id: 'experience', title: 'Work Experience', isVisible: true },
+  { id: 'education', title: 'Education', isVisible: true },
+  { id: 'skills', title: 'Skills & Proficiencies', isVisible: true },
+  { id: 'projects', title: 'Key Projects', isVisible: true },
+  { id: 'certifications', title: 'Certifications', isVisible: true },
+  { id: 'languages', title: 'Languages', isVisible: true },
+  { id: 'references', title: 'References', isVisible: true },
+];
+
+export const sampleCVProductDesigner: CVData = {
+  id: 'cv-designer-default',
+  title: 'Elena Rostova — Product Design Lead',
+  updatedAt: new Date().toISOString(),
+  theme: {
+    template: 'editorial',
+    fontFamily: 'manrope',
+    accentColor: '#18181B', // Charcoal black
+    fontSize: 'normal',
+    lineSpacing: 'normal',
+    pageMargin: 'normal',
+    paperSize: 'a4',
+  },
+  personal: {
+    fullName: 'Elena Rostova',
+    jobTitle: 'Senior Product Designer & Design Technologist',
+    email: 'elena.rostova@designworks.io',
+    phone: '+1 (415) 892-4412',
+    location: 'San Francisco, CA (Open to Remote)',
+    website: 'https://elenarostova.design',
+    linkedin: 'linkedin.com/in/elena-rostova',
+    github: 'github.com/erostova',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop',
+    showAvatar: true,
+  },
+  summary: {
+    content:
+      'Product Design Leader with 8+ years architecting enterprise SaaS workflows and scalable design systems. Proven record bridging high-craft visual fidelity with rigorous user research and front-end engineering principles. Led cross-functional design initiatives at scale-ups that increased user retention by 34% and reduced design debt across 12 distributed squads.',
+  },
+  experience: [
+    {
+      id: 'exp-1',
+      role: 'Staff Product Designer & Systems Lead',
+      company: 'Aura Cloud Technologies',
+      location: 'San Francisco, CA',
+      startDate: '2022-03',
+      endDate: '',
+      isCurrent: true,
+      highlights: [
+        'Spearheaded the complete rebuild of the core design system used by 45+ engineers and 12 product designers, cutting prototype-to-production turnaround by 40%.',
+        'Led end-to-end UX architecture for cloud compliance telemetry dashboards processing 2M+ daily events, driving a 28% increase in weekly active users.',
+        'Mentored 6 mid-level product designers and instituted quarterly design-critique frameworks across the product engineering organization.',
+      ],
+      description: 'Enterprise Cloud Infrastructure Platform',
+    },
+    {
+      id: 'exp-2',
+      role: 'Senior Product Designer',
+      company: 'Kinetic Analytics',
+      location: 'New York, NY',
+      startDate: '2019-06',
+      endDate: '2022-02',
+      isCurrent: false,
+      highlights: [
+        'Designed interactive data visualization widgets and self-serve onboarding funnels that boosted free-to-paid conversion by 22%.',
+        'Conducted 50+ generative and usability interviews with enterprise financial analysts to overhaul data ingestion workflows.',
+        'Collaborated closely with React/TypeScript engineers to implement tokenized design architecture and accessible WCAG 2.1 AA compliant components.',
+      ],
+      description: 'Fintech & Predictive Intelligence Suite',
+    },
+    {
+      id: 'exp-3',
+      role: 'UX / UI Designer',
+      company: 'Vanguard Interactive Studio',
+      location: 'Boston, MA',
+      startDate: '2017-08',
+      endDate: '2019-05',
+      isCurrent: false,
+      highlights: [
+        'Delivered responsive web apps and design collateral for fast-growing venture-backed startups across healthtech and logistics.',
+        'Standardized component libraries in Figma and created micro-interaction specifications using motion design prototypes.',
+      ],
+      description: 'Digital Product Agency',
+    },
+  ],
+  education: [
+    {
+      id: 'edu-1',
+      degree: 'Master of Science',
+      field: 'Human-Computer Interaction (HCI)',
+      school: 'Carnegie Mellon University',
+      location: 'Pittsburgh, PA',
+      startDate: '2015-09',
+      endDate: '2017-05',
+      gpa: '3.92 / 4.0',
+      honors: 'Graduate Fellowship in Interactive Media',
+    },
+    {
+      id: 'edu-2',
+      degree: 'Bachelor of Fine Arts',
+      field: 'Graphic & Interaction Design',
+      school: 'Rhode Island School of Design (RISD)',
+      location: 'Providence, RI',
+      startDate: '2011-09',
+      endDate: '2015-05',
+      gpa: '3.88 / 4.0',
+      honors: 'Summa Cum Laude, Department Honors',
+    },
+  ],
+  skills: [
+    {
+      id: 'skill-cat-1',
+      categoryName: 'Product & UX Design',
+      skills: ['Design Systems', 'Information Architecture', 'User Journey Mapping', 'Interaction Design', 'Usability Testing', 'Prototyping'],
+    },
+    {
+      id: 'skill-cat-2',
+      categoryName: 'Tools & Technologies',
+      skills: ['Figma / FigJam', 'React / TypeScript', 'Tailwind CSS', 'Framer Motion', 'Linear', 'Storybook'],
+    },
+    {
+      id: 'skill-cat-3',
+      categoryName: 'Strategy & Leadership',
+      skills: ['Cross-functional Alignment', 'Product Discovery', 'Design Sprint Facilitation', 'Design Tokens', 'Accessibility (WCAG 2.1)'],
+    },
+  ],
+  projects: [
+    {
+      id: 'proj-1',
+      title: 'Prism Multi-Brand Design System',
+      role: 'Lead Architect & Designer',
+      link: 'https://prism-system.example.com',
+      githubLink: 'https://github.com/erostova/prism-tokens',
+      startDate: '2023-01',
+      endDate: '2023-11',
+      techStack: ['Figma Tokens', 'React', 'Tailwind CSS', 'Storybook', 'Radix UI'],
+      highlights: [
+        'Architected tokenized theme engine supporting 4 brand themes and dark/light modes seamlessly with zero bundle overhead.',
+        'Adopted by over 200 engineers across 18 internal enterprise applications with 99.4% component coverage.',
+      ],
+    },
+    {
+      id: 'proj-2',
+      title: 'QueryLens Visual SQL Builder',
+      role: 'Product Designer & Frontend Collaborator',
+      link: 'https://querylens.example.io',
+      startDate: '2022-04',
+      endDate: '2022-10',
+      techStack: ['React', 'TypeScript', 'D3.js', 'Canvas API'],
+      highlights: [
+        'Created a node-based visual query canvas enabling non-technical operators to build multi-table relational queries.',
+        'Featured in ProductHunt Top 5 Product of the Day with over 4,500 active weekly users.',
+      ],
+    },
+  ],
+  certifications: [
+    {
+      id: 'cert-1',
+      title: 'NN/g UX Master Certified (UXMC)',
+      issuer: 'Nielsen Norman Group',
+      date: '2021',
+      credentialId: 'UXMC-884920',
+      credentialUrl: 'https://nngroup.com/verify',
+    },
+    {
+      id: 'cert-2',
+      title: 'Certified Accessibility Professional (CPACC)',
+      issuer: 'IAAP (International Association of Accessibility Professionals)',
+      date: '2022',
+      credentialId: 'IAAP-2022-114',
+    },
+  ],
+  languages: [
+    {
+      id: 'lang-1',
+      language: 'English',
+      proficiency: 'Native',
+    },
+    {
+      id: 'lang-2',
+      language: 'French',
+      proficiency: 'Fluent',
+    },
+    {
+      id: 'lang-3',
+      language: 'German',
+      proficiency: 'Intermediate',
+    },
+  ],
+  references: [
+    {
+      id: 'ref-1',
+      name: 'Marcus Vance',
+      role: 'VP of Engineering',
+      company: 'Aura Cloud Technologies',
+      email: 'm.vance@auracloud.example.com',
+      phone: '+1 (415) 555-0199',
+      isAvailableUponRequest: false,
+    },
+    {
+      id: 'ref-2',
+      name: 'Sarah Chen-Lewis',
+      role: 'Head of Product',
+      company: 'Kinetic Analytics',
+      email: 'sarah.cl@kinetic.example.com',
+      phone: '+1 (212) 555-0143',
+      isAvailableUponRequest: false,
+    },
+  ],
+  customSections: [
+    {
+      id: 'custom-1',
+      title: 'Publications & Speaking',
+      items: [
+        {
+          id: 'custom-item-1',
+          title: 'Design Systems at Enterprise Scale: Bridging Tokens to Code',
+          subtitle: 'Keynote Speaker at Config & DesignOps Global',
+          date: '2023',
+          highlights: [
+            'Delivered presentation to an audience of 1,200+ design leaders on establishing multi-tier token hierarchies.',
+          ],
+        },
+      ],
+    },
+  ],
+  sectionsOrder: defaultSectionsOrder,
+};
+
+export const sampleCVSoftwareEngineer: CVData = {
+  id: 'cv-engineer-default',
+  title: 'Julian Vance — Senior Full-Stack Engineer',
+  updatedAt: new Date().toISOString(),
+  theme: {
+    template: 'swiss',
+    fontFamily: 'inter',
+    accentColor: '#0F766E', // Refined Pine / Teal
+    fontSize: 'compact',
+    lineSpacing: 'dense',
+    pageMargin: 'normal',
+    paperSize: 'a4',
+  },
+  personal: {
+    fullName: 'Julian Vance',
+    jobTitle: 'Senior Full-Stack Engineer & Distributed Systems Specialist',
+    email: 'julian.vance@techdev.dev',
+    phone: '+1 (206) 438-9921',
+    location: 'Seattle, WA (Remote US)',
+    website: 'https://julianvance.dev',
+    linkedin: 'linkedin.com/in/julian-vance-dev',
+    github: 'github.com/julianvance',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop',
+    showAvatar: true,
+  },
+  summary: {
+    content:
+      'High-throughput full-stack engineer with 7+ years architecting microservices, event-driven backends, and low-latency client applications in TypeScript, Go, and Rust. Designed real-time streaming pipelines supporting 100k+ concurrent WebSocket connections with 99.99% uptime.',
+  },
+  experience: [
+    {
+      id: 'exp-eng-1',
+      role: 'Senior Full-Stack Engineer',
+      company: 'Apex Data Stream',
+      location: 'Seattle, WA',
+      startDate: '2021-04',
+      endDate: '',
+      isCurrent: true,
+      highlights: [
+        'Engineered distributed WebSocket proxy cluster reducing average message delivery latency from 180ms to 18ms across 5 global regions.',
+        'Migrated monolithic web dashboard into modular React 19 architecture, boosting Lighthouse score from 58 to 98.',
+        'Authored robust CI/CD pipelines with GitHub Actions and Docker, reducing deployment cycle times from 45 minutes to 4 minutes.',
+      ],
+      description: 'Real-time Event Streaming & Infrastructure',
+    },
+    {
+      id: 'exp-eng-2',
+      role: 'Full-Stack Software Engineer',
+      company: 'Helix Financial Technologies',
+      location: 'San Francisco, CA',
+      startDate: '2018-09',
+      endDate: '2021-03',
+      isCurrent: false,
+      highlights: [
+        'Built automated trade settlement engines handling $40M+ in daily transaction volume with idempotent message queues.',
+        'Developed reusable UI component library in React, Tailwind, and Jest adopted across 8 engineering product teams.',
+      ],
+      description: 'Fintech & Payment Orchestration',
+    },
+  ],
+  education: [
+    {
+      id: 'edu-eng-1',
+      degree: 'Bachelor of Science in Computer Science',
+      field: 'Distributed Systems & Algorithms',
+      school: 'University of Washington',
+      location: 'Seattle, WA',
+      startDate: '2014-09',
+      endDate: '2018-06',
+      gpa: '3.95 / 4.0',
+      honors: 'Dean’s List, Magna Cum Laude',
+    },
+  ],
+  skills: [
+    {
+      id: 'skill-eng-1',
+      categoryName: 'Languages & Core',
+      skills: ['TypeScript / JavaScript', 'Go (Golang)', 'Rust', 'Python', 'SQL (PostgreSQL)', 'GraphQL'],
+    },
+    {
+      id: 'skill-eng-2',
+      categoryName: 'Frontend & UI',
+      skills: ['React 18/19', 'Next.js', 'Tailwind CSS', 'Vite', 'State Management (Zustand)', 'WebSockets'],
+    },
+    {
+      id: 'skill-eng-3',
+      categoryName: 'Cloud & Infrastructure',
+      skills: ['AWS (ECS, Lambda, S3)', 'Docker & Kubernetes', 'Redis / Kafka', 'Terraform', 'CI/CD Pipelines'],
+    },
+  ],
+  projects: [
+    {
+      id: 'proj-eng-1',
+      title: 'HyperLog — High Performance In-Memory Logger',
+      role: 'Creator & Maintainer',
+      link: 'https://hyperlog.dev',
+      githubLink: 'https://github.com/julianvance/hyperlog',
+      startDate: '2023-02',
+      endDate: 'Present',
+      techStack: ['Rust', 'WebAssembly', 'TypeScript', 'Zero-Copy Serialization'],
+      highlights: [
+        'Open-source zero-copy logging engine with over 3,200 GitHub stars and 150k monthly crates downloads.',
+      ],
+    },
+  ],
+  certifications: [
+    {
+      id: 'cert-eng-1',
+      title: 'AWS Certified Solutions Architect – Professional',
+      issuer: 'Amazon Web Services',
+      date: '2023',
+      credentialId: 'AWS-PSA-9021',
+    },
+  ],
+  languages: [
+    {
+      id: 'lang-eng-1',
+      language: 'English',
+      proficiency: 'Native',
+    },
+    {
+      id: 'lang-eng-2',
+      language: 'Spanish',
+      proficiency: 'Professional',
+    },
+  ],
+  references: [
+    {
+      id: 'ref-eng-1',
+      name: 'Available Upon Request',
+      role: '',
+      company: '',
+      email: '',
+      phone: '',
+      isAvailableUponRequest: true,
+    },
+  ],
+  customSections: [],
+  sectionsOrder: defaultSectionsOrder,
+};
+
+export const sampleCVExecutive: CVData = {
+  id: 'cv-executive-default',
+  title: 'Clara Chen — VP of Growth & Product',
+  updatedAt: new Date().toISOString(),
+  theme: {
+    template: 'executive',
+    fontFamily: 'jakarta',
+    accentColor: '#854D0E', // Refined Warm Amber / Bronze
+    fontSize: 'normal',
+    lineSpacing: 'normal',
+    pageMargin: 'normal',
+    paperSize: 'a4',
+  },
+  personal: {
+    fullName: 'Clara Chen',
+    jobTitle: 'Vice President of Growth & Operations',
+    email: 'clara.chen@executivegrowth.io',
+    phone: '+1 (312) 670-8910',
+    location: 'Chicago, IL (Open to Relocation)',
+    website: 'https://clarachen.io',
+    linkedin: 'linkedin.com/in/clara-chen-growth',
+    github: '',
+    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop',
+    showAvatar: true,
+  },
+  summary: {
+    content:
+      'Executive growth operator with 10+ years scaling B2B enterprise SaaS businesses from Series A ($3M ARR) to pre-IPO ($65M+ ARR). Expertise spanning product-led growth (PLG), customer acquisition unit economics, sales alignment, and organizational leadership across global multidisciplinary teams.',
+  },
+  experience: [
+    {
+      id: 'exp-exec-1',
+      role: 'VP of Growth & Monetization',
+      company: 'Synthetix Global Solutions',
+      location: 'Chicago, IL',
+      startDate: '2021-08',
+      endDate: '',
+      isCurrent: true,
+      highlights: [
+        'Scaled Annual Recurring Revenue (ARR) from $18M to $54M in 3 years through strategic pricing tier restructuring and international market expansion.',
+        'Built and managed a high-performing 32-person growth division covering Growth Engineering, Lifecycle Marketing, and RevOps.',
+        'Decreased Customer Acquisition Cost (CAC) by 31% while increasing Net Revenue Retention (NRR) from 104% to 128%.',
+      ],
+      description: 'Enterprise AI & Workflow Automation SaaS',
+    },
+    {
+      id: 'exp-exec-2',
+      role: 'Director of Product Growth',
+      company: 'Beacon Metric Corp',
+      location: 'San Francisco, CA',
+      startDate: '2017-03',
+      endDate: '2021-07',
+      isCurrent: false,
+      highlights: [
+        'Established first product-led self-serve tier resulting in $12M incremental pipeline within 18 months.',
+        'Partnered with executive leadership on Series B ($25M) and Series C ($60M) fundraising diligence and financial modeling.',
+      ],
+      description: 'Product Analytics & Attribution Platform',
+    },
+  ],
+  education: [
+    {
+      id: 'edu-exec-1',
+      degree: 'Master of Business Administration (MBA)',
+      field: 'Strategic Management & Finance',
+      school: 'Northwestern University — Kellogg School of Management',
+      location: 'Evanston, IL',
+      startDate: '2015-09',
+      endDate: '2017-06',
+      honors: 'Dean’s Distinguished Scholar',
+    },
+    {
+      id: 'edu-exec-2',
+      degree: 'Bachelor of Arts',
+      field: 'Economics & Mathematics',
+      school: 'University of Chicago',
+      location: 'Chicago, IL',
+      startDate: '2010-09',
+      endDate: '2014-06',
+      honors: 'Phi Beta Kappa',
+    },
+  ],
+  skills: [
+    {
+      id: 'skill-exec-1',
+      categoryName: 'Executive Competencies',
+      skills: ['P&L Management ($50M+)', 'Go-To-Market (GTM) Strategy', 'Product-Led Growth (PLG)', 'Enterprise Sales Enablement', 'M&A Due Diligence'],
+    },
+    {
+      id: 'skill-exec-2',
+      categoryName: 'Operational & Analytical',
+      skills: ['Unit Economics (LTV/CAC)', 'Revenue Operations', 'Cohort Retention Modeling', 'Board Reporting', 'Cross-Functional Team Scaling'],
+    },
+  ],
+  projects: [
+    {
+      id: 'proj-exec-1',
+      title: 'Global EMEA & APAC Expansion Initiative',
+      role: 'Executive Sponsor',
+      link: 'https://synthetix.example.com/global',
+      startDate: '2022-01',
+      endDate: '2023-06',
+      techStack: ['Multi-currency Billing', 'Localization', 'GDPR/SOC2 Compliance'],
+      highlights: [
+        'Delivered $14M net new ARR from European and Asia-Pacific markets in Year 1 post-launch.',
+      ],
+    },
+  ],
+  certifications: [
+    {
+      id: 'cert-exec-1',
+      title: 'Reforge Growth Series & Advanced Retention',
+      issuer: 'Reforge Executive Program',
+      date: '2019',
+    },
+  ],
+  languages: [
+    {
+      id: 'lang-exec-1',
+      language: 'English',
+      proficiency: 'Native',
+    },
+    {
+      id: 'lang-exec-2',
+      language: 'Mandarin Chinese',
+      proficiency: 'Fluent',
+    },
+  ],
+  references: [
+    {
+      id: 'ref-exec-1',
+      name: 'Available Upon Request',
+      role: '',
+      company: '',
+      email: '',
+      phone: '',
+      isAvailableUponRequest: true,
+    },
+  ],
+  customSections: [],
+  sectionsOrder: defaultSectionsOrder,
+};
+
+export const emptyCVData: CVData = {
+  id: 'cv-empty',
+  title: 'Untitled Resume',
+  updatedAt: new Date().toISOString(),
+  theme: {
+    template: 'editorial',
+    fontFamily: 'inter',
+    accentColor: '#18181B',
+    fontSize: 'normal',
+    lineSpacing: 'normal',
+    pageMargin: 'normal',
+    paperSize: 'a4',
+  },
+  personal: {
+    fullName: '',
+    jobTitle: '',
+    email: '',
+    phone: '',
+    location: '',
+    website: '',
+    linkedin: '',
+    github: '',
+    avatarUrl: '',
+    showAvatar: false,
+  },
+  summary: {
+    content: '',
+  },
+  experience: [],
+  education: [],
+  skills: [],
+  projects: [],
+  certifications: [],
+  languages: [],
+  references: [],
+  customSections: [],
+  sectionsOrder: defaultSectionsOrder,
+};
