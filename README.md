@@ -4,7 +4,7 @@ A modern, minimalist CV builder designed to make creating a professional resume 
 
 Build your CV section by section, preview your changes in real time, and create a professional document without the complexity of traditional resume builders.
 
-## ✦ Features
+## Features
 
 * **Personal Information** — Add your name, contact details, location, and professional links.
 * **Professional Summary** — Create a concise introduction about yourself and your experience.
@@ -16,7 +16,7 @@ Build your CV section by section, preview your changes in real time, and create 
 * **Responsive Design** — Works across desktop, tablet, and mobile screens.
 * **Minimal Interface** — Focused UI designed to keep the CV-building process simple.
 
-## ✦ Tech Stack
+## Tech Stack
 
 * React
 * TypeScript
@@ -33,16 +33,13 @@ cv-builder/
 ├── public/
 ├── src/
 │   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   └── ...
 ├── index.html
 ├── package.json
 ├── package-lock.json
 └── README.md
 ```
 
-## ✦ Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -70,27 +67,10 @@ npm run dev
 
 Open the local development URL shown in your terminal.
 
-## ✦ How It Works
-
-The CV Builder uses a structured form-based workflow:
-
-```text
-Personal Details
-       ↓
-Professional Summary
-       ↓
-Experience
-       ↓
-Education
-       ↓
-Skills & Projects
-       ↓
-Live CV Preview
-```
 
 Users can enter their information and immediately see how their CV is presented.
 
-## ✦ Design
+## Design
 
 The interface follows a **minimalist editorial aesthetic**, prioritizing:
 
@@ -103,21 +83,8 @@ The interface follows a **minimalist editorial aesthetic**, prioritizing:
 
 The goal is to make the builder feel more like a focused creative tool than a traditional form.
 
-## ✦ Future Improvements
 
-Potential additions include:
-
-* [ ] Multiple CV templates
-* [ ] PDF export
-* [ ] Print-ready layouts
-* [ ] Dark / light mode
-* [ ] Drag-and-drop sections
-* [ ] Custom accent colors
-* [ ] Import / export CV data
-* [ ] Local storage support
-* [ ] ATS-friendly templates
-
-## ✦ Use Cases
+## Use Cases
 
 CV Builder can be used by:
 
@@ -127,7 +94,7 @@ CV Builder can be used by:
 * Designers creating portfolio-focused CVs
 * Professionals updating their existing resume
 
-## ✦ Contributing
+## Contributing
 
 Contributions, ideas, and improvements are welcome.
 
@@ -153,7 +120,7 @@ git push origin feature/your-feature
 
 6. Open a Pull Request
 
-## ✦ License
+## License
 
 This project is open source and available under the **MIT License**.
 
